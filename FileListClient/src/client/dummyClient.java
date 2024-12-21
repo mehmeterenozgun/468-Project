@@ -23,6 +23,7 @@ public class dummyClient {
     long totalDownloadedBytes = 0;
     int totalPartRequests = 0;
 
+
     private String calculateFileMD5(String filePath) throws IOException {
         try {
             MessageDigest md5Digest = MessageDigest.getInstance("MD5");
@@ -154,6 +155,11 @@ public class dummyClient {
         String[] adr1 = args[0].split(":");
         String ip1 = adr1[0];
         int port1 = Integer.valueOf(adr1[1]);
+
+        String[] adr2 = args[1].split(":");
+        String ip2 = adr2[0];
+        int port2 = Integer.valueOf(adr2[1]);
+
         dummyClient inst = new dummyClient();
 
         System.out.println("Getting files");
